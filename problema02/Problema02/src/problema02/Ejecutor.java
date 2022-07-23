@@ -15,7 +15,8 @@ public class Ejecutor {
      */
     public static void main(String[] args) {
         Enlace c = new Enlace();
-        for (int i = 0; i < c.obtenerDataAuto().size(); i++) {
-            System.out.printf("%s\n", c.obtenerDataAuto().get(i));
+        for (int i = 0; i < c.obtenerDataEstudiante().size(); i++) {
+            System.out.printf("%s\n", c.obtenerDataEstudiante().get(i));
         }
     }
+}

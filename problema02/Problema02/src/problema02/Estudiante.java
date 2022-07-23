@@ -15,6 +15,7 @@ public class Estudiante {
     private double cal1;
     private double cal2;
     private double cal3;
+    private double promedio;
 
     public void establecerNombre(String nom) {
         nombre = nom;
@@ -36,6 +37,10 @@ public class Estudiante {
         cal3 = cl3;
     }
 
+    public void calcularPromedio() {
+        promedio = (cal1 + cal2 + cal3) / 3;
+    }
+
     public String obtenerNombre() {
         return nombre;
     }
@@ -54,6 +59,18 @@ public class Estudiante {
 
     public double obtenerCal3() {
         return cal3;
+    }
+
+    public double obtenerPromedio() {
+        return promedio;
+    }
+
+    @Override
+    public String toString() {
+        String cadena = String.format("%s %s\n  Calificaciones:\n  %.1f"
+                + "\n  %.1f\n  %.1f\n  Promedio: %.1f\n",
+                nombre, apellido, cal1, cal2, cal3, promedio);
+        return cadena;
     }
 
 }
